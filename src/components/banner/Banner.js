@@ -6,9 +6,10 @@ import classes from './Banner.module.css';
 
 function Banner() {
 
+    //initial state for movie
     const [movie, setMovie] = useState([]);
 
-    //on page refresh display a new movie image
+    //on page refresh display a new image
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(requests.fetchNetflixOriginals);
