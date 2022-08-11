@@ -8,6 +8,7 @@ const instance = axios.create({
 
 
 // instance.get('/movie'); => https://api.themoviedb.org/3/movie
+// React pattern for making multiple requests
 
 
 export default instance;
