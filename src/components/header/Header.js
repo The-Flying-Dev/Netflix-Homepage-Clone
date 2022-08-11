@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './header.scss';
 import logo from '../../assets/tmovie.png';
 
+//creates array for the navbar
 const headerNav = [
     {
         display: 'Home',
@@ -42,6 +43,8 @@ const Header = () => {
       };
   }, []);
 
+
+  //maps through the headerNav array 
   return (
       <div ref={headerRef} className="header">
           <div className="header__wrap container">
