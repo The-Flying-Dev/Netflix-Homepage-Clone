@@ -4,7 +4,7 @@ import axios from '../../api/axios';
 import requests from '../../requests';
 import classes from './Banner.module.css';
 
-const Banner = () => {
+function Banner() {
 
     const [movie, setMovie] = useState([]);
 
@@ -24,7 +24,7 @@ const Banner = () => {
 
 
     //truncates movie overview to the limit set for n
-    //if the overview length is greater then truncate or return the original overview text
+    //if the overview length is greater than n, then truncate or return the original overview text
     function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
     }
@@ -41,7 +41,9 @@ const Banner = () => {
         >
             <div className={classes.banner_contents}>
                 <h1 className={classes.banner_title}>
-                    {movie?.title || movie?.name || movie?.original_name} {/* displays the title depending on the edge case */}
+
+                    {/* ?. == optional chaining, displays the title depending on the edge case */}
+                    {movie?.title || movie?.name || movie?.original_title} 
                 </h1>
 
                 <div className={classes.banner_buttons}>
@@ -49,7 +51,7 @@ const Banner = () => {
                     <button className={classes.banner_button}>My List</button>
                 </div>
 
-                {/*truncates movie overview to 150 characters */}
+                {/* truncates movie overview to 150 characters */}
                 <h1 className={classes.banner_description}>{truncate(movie?.overview, 150)}</h1>
             </div>
 

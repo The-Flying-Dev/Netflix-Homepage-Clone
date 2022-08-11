@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import classes from './App.module.css';
 import requests from './requests';
@@ -7,11 +7,11 @@ import Banner from './components/banner/Banner';
 import Row from './components/row/Row';
 
 
-const App = () => {
+function App() {
     return (
         <div className={classes.app}>
             <Banner />
-            <Row title="Netflix Originals" isLargeRow fetchUrl={requests.fetchNetflixOriginals} />
+            <Row title="Netflix Originals" isLargeRow={true} fetchUrl={requests.fetchNetflixOriginals} />
             <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
             <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
             <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
