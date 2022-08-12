@@ -37,8 +37,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
           // https://developers.google.com/youtube/player_parameters
             autoplay: 1,
             //origin: 'http://localhost:3000',
-        }
-    }
+        },
+    };
 
     const handleClick = (movie) => {
         if (trailerUrl) {
@@ -50,7 +50,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
                   setTrailerUrl(urlParams.get('v'));                  
               }).catch((error) => console.log(error))
         }
-    }
+    };
 
     return (
       <div className="row">
