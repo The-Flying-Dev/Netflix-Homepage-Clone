@@ -7,7 +7,7 @@ const instance = axios.create({
 });
 
 
-// instance.get('/movie'); => https://api.themoviedb.org/3/movie
+// instance.get('/movie'), appends to end of the baseURL; => https://api.themoviedb.org/3/movie
 // React pattern for making multiple requests
 
 

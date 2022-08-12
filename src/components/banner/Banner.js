@@ -4,6 +4,7 @@ import axios from '../../api/axios';
 import requests from '../../requests';
 import classes from './Banner.module.css';
 
+//stateless component
 function Banner() {
 
     //initial state for movie
